@@ -1,5 +1,6 @@
 'use client';
 import React from 'react'
+import { useRouter } from 'next/navigation';
 
 type ButtonProps = {
     children: React.ReactNode;
@@ -9,13 +10,15 @@ type ButtonProps = {
 }
 
 export default function Button({ children, to = '', variant = 'fill', className }: ButtonProps) {
+    const router = useRouter();
+
     return (
         <button
             onClick={() => {
                 if (to !== '') {
-                    window.location.href = to;
+                    router.push(to);
                 } else {
-                    console.warn('Button clicked without a valid "to" prop. Please provide a URL or function to handle the click.');
+                    
                 }
             }}
             className={`py-2 px-4 rounded-full cursor-pointer ${

@@ -3,7 +3,7 @@ import Button from '@/components/Button';
 
 export default function Home() {
     return (
-        <div className="w-full h-fit flex justify-start items-center flex-col">
+        <div className="w-full h-fit flex justify-start items-center flex-col mt-4">
             <div className='w-full h-[40rem] flex justify-center items-center relative'>
                 <div className='w-[75%] h-fit flex justify-center items-center -z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5'>
                     <img src='/world_map.svg' alt="" className="w-full h-full object-contain" />
