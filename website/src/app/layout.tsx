@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Geist, Rubik } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
+    subsets: ["latin"],
+});
+
+const rubik = Rubik({
+    variable: "--font-rubik",
     subsets: ["latin"],
 });
 
@@ -26,7 +32,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-        <body className={`${geistSans.variable} antialiased w-screen h-screen overflow-x-hidden`}>
+        <body className={`${geistSans.variable} ${rubik.variable} antialiased w-screen h-screen overflow-x-hidden`}>
             <header>
                 <Navbar />
             </header>
@@ -34,6 +40,10 @@ export default function RootLayout({
             <main>
                 {children}
             </main>
+
+            <footer>
+                <Footer />
+            </footer>
         </body>
         </html>
     );

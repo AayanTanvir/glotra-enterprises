@@ -8,7 +8,10 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary-500: #1E6F8E;
+  --color-primary-600: #1d627e;
   --font-geist: var(--font-geist-sans);
+  --font-rubik: var(--font-rubik);
 }
 
 @media (prefers-color-scheme: dark) {
