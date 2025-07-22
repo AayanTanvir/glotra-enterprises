@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function useSystemTheme() {
     const [isDark, setIsDark] = useState<boolean | null>(null);

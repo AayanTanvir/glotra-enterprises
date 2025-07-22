@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Button from '@/components/Button';
+import Image from 'next/image';
 import { BsGlobe } from "react-icons/bs";
 import { FaRegHandshake } from "react-icons/fa";
 import { RiMenuSearchLine, RiTeamLine } from "react-icons/ri";
@@ -11,8 +12,8 @@ export default function Home() {
     return (
         <div className="w-full h-fit flex justify-start items-center flex-col mt-8 md:mt-16">
             <div className='w-full h-[30rem] flex justify-center items-center relative '>
-                <div className='hidden md:flex md:w-[75%] md:max-w-[1080px] h-fit justify-center items-center -z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-100 dark:opacity-5'>
-                    <img src='/world_map.svg' alt="" className="w-full h-full object-contain" />
+                <div className='hidden md:flex md:w-[75%] md:max-w-[1080px] h-full justify-center items-center -z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-100 dark:opacity-5'>
+                    <Image src='/world_map.svg' alt="World map" fill className="object-contain" />
                 </div>
                 <div className='w-full h-full flex justify-center items-center flex-col gap-4'>
                     <div className='px-4'>
