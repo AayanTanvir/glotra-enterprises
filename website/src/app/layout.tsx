@@ -31,7 +31,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-        <body className={`${geistSans.variable} ${rubik.variable} antialiased w-screen h-screen overflow-x-hidden relative`}>
+        <body className={`${geistSans.variable} ${rubik.variable} antialiased w-screen h-fit overflow-x-hidden relative flex flex-col `}>
             <header>
                 <Navbar />
             </header>
@@ -40,7 +40,7 @@ export default function RootLayout({
                 {children}
             </main>
 
-            <footer className="absolute bottom-2 left-0 w-full bg-background">
+            <footer className="w-full bg-background p-2 mt-4">
                 <p className='font-rubik text-center text-xs sm:text-md'>© {new Date().getFullYear()} Glotra Enterprises. All rights reserved.</p>
             </footer>
         </body>

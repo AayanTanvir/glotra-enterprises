@@ -22,7 +22,7 @@ export default function Button({ children, to = '', variant = 'fill', className 
                 }
             }}
             className={`py-2 px-4 rounded-full cursor-pointer transition duration-200 ease-in-out ${
-                variant === 'fill' ? 'bg-primary-500 text-foreground hover:bg-primary-600' : 'bg-transparent border-[1px] hover:border-primary-500 text-foreground hover:text-primary-500'
+                variant === 'fill' ? 'bg-primary-500 text-white hover:bg-primary-600' : 'bg-transparent border-[1px] text-foreground hover:border-primary-500 hover:text-primary-500'
             } ${className}`}
         >
             {children}
