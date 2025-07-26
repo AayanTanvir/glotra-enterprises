@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Rubik } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { AppContextProvider } from "@/context/AppContext";
+import Sidebar from "@/components/Sidebar";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -32,17 +34,23 @@ export default function RootLayout({
     return (
         <html lang="en">
         <body className={`${geistSans.variable} ${rubik.variable} antialiased w-screen h-fit overflow-x-hidden relative flex flex-col `}>
-            <header>
-                <Navbar />
-            </header>
+            <AppContextProvider>
+                <header>
+                    <Navbar />
+                </header>
 
-            <main>
-                {children}
-            </main>
+                <aside>
+                    <Sidebar />
+                </aside>
 
-            <footer className="w-full bg-background p-2 mt-4">
-                <p className='font-rubik text-center text-xs sm:text-md'>© {new Date().getFullYear()} Glotra Enterprises. All rights reserved.</p>
-            </footer>
+                <main>
+                    {children}
+                </main>
+
+                <footer className="w-full bg-background p-2 mt-4">
+                    <p className='font-rubik text-center text-xs sm:text-md'>© {new Date().getFullYear()} Glotra Enterprises. All rights reserved.</p>
+                </footer>
+            </AppContextProvider>
         </body>
         </html>
     );

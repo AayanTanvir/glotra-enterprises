@@ -4,12 +4,13 @@ import { useRouter } from 'next/navigation';
 
 type ButtonProps = {
     children: React.ReactNode;
+    icon?: React.ReactNode;
     to?: string;
-    variant?: 'fill' | 'outline';
+    variant?: 'primary' | 'transparent';
     className?: string;
 }
 
-export default function Button({ children, to = '', variant = 'fill', className }: ButtonProps) {
+export default function Button({ children, to = '', variant = 'primary', className, icon }: ButtonProps) {
     const router = useRouter();
 
     return (
@@ -21,10 +22,9 @@ export default function Button({ children, to = '', variant = 'fill', className 
                     
                 }
             }}
-            className={`py-2 px-4 rounded-full cursor-pointer transition duration-200 ease-in-out ${
-                variant === 'fill' ? 'bg-primary-500 text-white hover:bg-primary-600' : 'bg-transparent border-[1px] text-foreground hover:bg-foreground/5'
-            } ${className}`}
+            className={`btn ${ variant === 'primary' ? 'btn-primary' : 'btn-transparent' } ${className}`}
         >
+            {icon && <>{icon}</>}
             {children}
         </button>
     )

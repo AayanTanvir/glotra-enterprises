@@ -6,27 +6,55 @@
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-primary-300: #2485ac;
-  --color-primary-400: #227ca0;
-  --color-primary-500: #1E6F8E;
-  --color-primary-600: #1d627e;
-  --font-geist: var(--font-geist-sans);
-  --font-rubik: var(--font-rubik);
+    --color-foreground: var(--foreground);
+    --color-background: var(--background);
+    --color-primary-300: #2485ac;
+    --color-primary-400: #227ca0;
+    --color-primary-500: #1E6F8E;
+    --color-primary-600: #1d627e;
+    --font-geist: var(--font-geist-sans);
+    --font-rubik: var(--font-rubik);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
+}
+
+@layer components {
+
+    .btn {
+        @apply inline-flex items-center justify-center gap-1.5 text-nowrap py-2 px-4 rounded-2xl transition duration-200 cursor-pointer ease-in-out;
+    }
+    .btn-primary {
+        @apply bg-primary-500 text-white hover:bg-primary-600;
+    }
+    .btn-transparent {
+        @apply bg-transparent border-[1px] text-foreground hover:bg-foreground/5;
+    }
+
+    .navbar-link {
+        @apply font-rubik tracking-tight relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:rounded-full after:h-[1px] after:bg-foreground after:transition-all after:duration-300 after:ease-in-out hover:after:w-full text-xs text-nowrap sm:text-base;
+    }
+
+    .navbar-link-active {
+        @apply after:w-full;
+    }
+
+    .sidebar-link {
+        @apply font-rubik inline-flex max-w-60 items-center justify-center gap-1.5 text-nowrap w-full text-foreground py-2 px-4 rounded border-[1px] border-foreground;
+    }
+    .sidebar-link-active {
+        @apply bg-primary-500 text-foreground;
+    }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 ::-webkit-scrollbar {
