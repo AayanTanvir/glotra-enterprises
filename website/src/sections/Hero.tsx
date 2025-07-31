@@ -13,7 +13,7 @@ const Hero = () => {
             <div className='w-full h-full flex justify-center items-center flex-col gap-4'>
                 <div className='px-4'>
                     <h1 className="font-geist text-3xl sm:text-4xl md:text-6xl select-none text-center tracking-tight mb-2 font-semibold">Glotra Enterprises</h1>
-                    <h3 className="text-sm sm:text-lg font-geist select-none text-center">Trading support, indenting, and import/export services for businesses worldwide</h3>
+                    <h3 className="text-sm sm:text-lg font-geist select-none text-center">Indenting, and import/export services for businesses worldwide</h3>
                 </div>
                 <div className='w-fit h-fit flex justify-between items-center gap-4'>
                     <Button to='/contact' icon={<IoMdCall className='text-xl text-white dark:text-foreground'/>}>Contact Us</Button>

@@ -10,7 +10,7 @@ const Navbar = () => {
     const { sidebar, setSidebar } = useAppContext();
 
     return (
-        <nav className='w-full max-h-12 fixed top-0 left-0 z-50 p-4 bg-background flex justify-between sm:justify-evenly items-center'>
+        <nav className='w-full max-h-12 fixed top-0 left-0 z-50 py-8 px-4 bg-background flex justify-between sm:justify-evenly items-center'>
             <Link href='/' className='flex justify-center items-center gap-1 cursor-pointer'>
                 <Image src="/glotra_logo.svg" alt="Glotra Logo" width={30} height={30} />
                 <h1 className='font-rubik text-xl sm:text-2xl font-semibold'>Glotra</h1>
