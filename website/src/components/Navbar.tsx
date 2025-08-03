@@ -10,12 +10,17 @@ const Navbar = () => {
     const { sidebar, setSidebar } = useAppContext();
 
     return (
-        <nav className='w-full max-h-12 fixed top-0 left-0 z-50 py-8 px-4 bg-background flex justify-between sm:justify-evenly items-center'>
-            <Link href='/' className='flex justify-center items-center gap-1 cursor-pointer'>
-                <Image src="/glotra_logo.svg" alt="Glotra Logo" width={30} height={30} />
-                <h1 className='font-rubik text-xl sm:text-2xl font-semibold'>Glotra</h1>
-            </Link>
-            <div className='hidden sm:flex h-full justify-between items-center gap-2 sm:gap-4'>
+        <nav className='w-full h-12 md:h-28 fixed top-0 left-0 z-50 px-4 md:p-0 bg-background flex justify-between sm:justify-evenly md:justify-start items-center '>
+            <div className='md:min-w-[350px] md:h-full md:flex items-center justify-center md:bg-primary-800 md:border-b-4 border-primary-600'>
+                <Link href='/' className='flex justify-center items-center gap-2 cursor-pointer select-none'>
+                    <Image src="/glotra_logo.svg" alt="Glotra Logo" width={30} height={30} className='md:w-[70px] md:h-[70px]' />
+                    <div className='flex flex-col justify-start items-start'>
+                        <h1 className='font-rubik text-xl sm:text-2xl md:text-4xl font-semibold'>Glotra</h1>
+                        <p className='hidden md:inline font-rubik text-xs'>Enterprises (Pvt.) Ltd.</p>
+                    </div>
+                </Link>
+            </div>
+            <div className='hidden sm:flex md:flex-1 md:h-full justify-between md:justify-center items-center gap-2 sm:gap-4'>
                 <NavbarLink to="/contact">Contact Us</NavbarLink>
                 <NavbarLink to="/about">About Us</NavbarLink>
                 <NavbarLink to="/products">Products</NavbarLink>
