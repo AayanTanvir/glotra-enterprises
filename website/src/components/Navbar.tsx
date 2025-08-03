@@ -16,10 +16,10 @@ const Navbar = () => {
                 <h1 className='font-rubik text-xl sm:text-2xl font-semibold'>Glotra</h1>
             </Link>
             <div className='hidden sm:flex h-full justify-between items-center gap-2 sm:gap-4'>
+                <NavbarLink to="/contact">Contact Us</NavbarLink>
                 <NavbarLink to="/about">About Us</NavbarLink>
                 <NavbarLink to="/products">Products</NavbarLink>
                 <NavbarLink to="/services">Services</NavbarLink>
-                <NavbarLink to="/contact">Contact Us</NavbarLink>
             </div>
             <div onClick={() => { setSidebar(!sidebar); }} className='block sm:hidden cursor-pointer min-w-8'>
                 <IoIosMenu className='text-2xl text-foreground' />

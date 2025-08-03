@@ -15,10 +15,10 @@ const Sidebar = () => {
                 <button onClick={() => setSidebar(false)} className="cursor-pointer"><IoIosClose className="text-3xl text-foreground"/></button>
             </div>
             <div className="w-full flex-1 flex flex-col justify-center items-center gap-4">
+                <SidebarLink to="/contact">Contact Us</SidebarLink>
                 <SidebarLink to="/about">About Us</SidebarLink>
                 <SidebarLink to="/products">Products</SidebarLink>
                 <SidebarLink to="/services">Services</SidebarLink>
-                <SidebarLink to="/contact">Contact Us</SidebarLink>
             </div>
             <div className="w-full min-h-12 flex justify-center items-center gap-1 pt-2 border-t-[1px] border-rounded border-foreground/20">
                 <Image src="/glotra_logo.svg" alt="Glotra Logo" width={25} height={25} />
