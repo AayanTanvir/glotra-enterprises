@@ -1,6 +1,7 @@
 'use client';
 
 import Button from '@/components/Button';
+import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import { IoIosInformationCircleOutline, IoMdCall } from "react-icons/io";
 import { MdNavigateBefore, MdNavigateNext } from 'react-icons/md';
@@ -41,21 +42,24 @@ const Hero = () => {
 
     return (
         <div className='w-full h-[30rem] flex md:flex-col md:gap-4 justify-center items-center md:pt-4'>
-            <div className='hidden md:block w-[98%] h-full relative overflow-x-hidden'>
-                <div className='slide w-full h-full absolute bg-primary-600 transition duration-500'>
-
+            <div className='hidden md:block w-[90%] h-full relative overflow-x-hidden'>
+                <div className='slide w-full h-full absolute transition duration-500'>
+                    <div className='w-full h-full flex flex-col justify-start items-start relative'>
+                        <Image src='/drones.png' alt='Agricultural Field with Drones' className='object-cover absolute' fill/>
+                        
+                    </div>
                 </div>
-                <div className='slide w-full h-full absolute bg-red-600 transition duration-500'>
-
+                <div className='slide w-full h-full flex flex-col justify-start items-start absolute transition duration-500'>
+                    <Image src='/oil_and_gas2.jpg' alt='Oil And Gas' className='object-cover' fill/>
                 </div>
-                <div className='slide w-full h-full absolute bg-green-600 transition duration-500'>
-
+                <div className='slide w-full h-full flex flex-col justify-start items-start absolute transition duration-500'>
+                    <Image src='/energy2.jpg' alt='Oil And Gas' className='object-cover' fill/>
                 </div>
-                <div className='slide w-full h-full absolute bg-amber-600 transition duration-500'>
- 
+                <div className='slide w-full h-full flex flex-col justify-start items-start absolute transition duration-500'>
+                    <Image src='/mining.jpg' alt='Oil And Gas' className='object-cover' fill/>
                 </div>
             </div>
-            <div className='flex justify-center items-center gap-6'>
+            <div className='hidden md:flex justify-center items-center gap-6'>
                 <div onClick={() => { goPrev() }} className={`select-none w-fit h-fit p-1 border-[1px] border-foreground flex justify-center items-center ${count === 0 ? 'cursor-not-allowed border-foreground/20' : 'cursor-pointer'}`}>
                     <MdNavigateBefore className={`text-xl text-foreground ${count === 0 ? 'text-foreground/20' : ''}`}/>
                 </div>

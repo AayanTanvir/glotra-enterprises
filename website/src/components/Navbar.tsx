@@ -10,13 +10,13 @@ const Navbar = () => {
     const { sidebar, setSidebar } = useAppContext();
 
     return (
-        <nav className='w-full h-12 md:h-28 fixed top-0 left-0 z-50 px-4 md:p-0 bg-background flex justify-between sm:justify-evenly md:justify-start items-center '>
+        <nav className='w-full h-12 md:h-28 fixed top-0 left-0 z-50 border-b-2 dark:border-none border-foreground  px-4 md:p-0 bg-background flex justify-between sm:justify-evenly md:justify-start items-center '>
             <div className='md:min-w-[350px] md:h-full md:flex items-center justify-center md:bg-primary-800 md:border-b-4 border-primary-600'>
                 <Link href='/' className='flex justify-center items-center gap-2 cursor-pointer select-none'>
                     <Image src="/glotra_logo.svg" alt="Glotra Logo" width={30} height={30} className='md:w-[70px] md:h-[70px]' />
                     <div className='flex flex-col justify-start items-start'>
-                        <h1 className='font-rubik text-xl sm:text-2xl md:text-4xl font-semibold'>Glotra</h1>
-                        <p className='hidden md:inline font-rubik text-xs'>Enterprises (Pvt.) Ltd.</p>
+                        <h1 className='font-rubik text-white text-xl sm:text-2xl md:text-4xl font-semibold'>Glotra</h1>
+                        <p className='hidden text-white md:inline font-rubik text-xs'>Enterprises (Pvt.) Ltd.</p>
                     </div>
                 </Link>
             </div>
