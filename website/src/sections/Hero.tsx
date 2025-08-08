@@ -62,8 +62,8 @@ const Hero = () => {
 
     return (
         <div className='w-full h-[30rem] flex md:flex-col md:gap-4 justify-center items-center md:pt-4'>
-            <div className='hidden md:block w-[90%] h-full relative overflow-hidden'>
-                <div onMouseEnter={() => { setHoveringOnSlide(true) }} onMouseLeave={() => { setHoveringOnSlide(false) }} className='slide w-full h-full absolute transition duration-500'>
+            <div onMouseEnter={() => { setHoveringOnSlide(true) }} onMouseLeave={() => { setHoveringOnSlide(false) }} className='hidden md:block w-[90%] h-full relative overflow-hidden rounded-lg transition-all duration-50 ease-in-out hover:border-2 border-foreground'>
+                <div  className='slide w-full h-full absolute transition duration-500'>
                     <div className='w-full h-full flex justify-start items-center relative'>
                         <Image src='/drones.png' alt='Agricultural Field with Drones' className='object-cover absolute' fill sizes="(min-width: 768px) 90vw, 0vw"/>
                         <div className='z-10 h-full w-fit flex flex-col justify-center items-start gap-2 p-8 max-w-[60%]'>
@@ -72,7 +72,7 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
-                <div onMouseEnter={() => { setHoveringOnSlide(true) }} onMouseLeave={() => { setHoveringOnSlide(false) }} className='slide w-full h-full flex flex-col justify-start items-start absolute transition duration-500'>
+                <div className='slide w-full h-full flex flex-col justify-start items-start absolute transition duration-500'>
                     <div className='w-full h-full flex justify-start items-center relative'>
                         <Image src='/oil_and_gas2.jpg' alt='Oil And Gas' className='object-cover' fill sizes="(min-width: 768px) 90vw, 0vw"/>                        
                         <div className='z-10 h-full w-fit flex flex-col justify-center items-start gap-2 p-8 max-w-[60%]'>
@@ -81,7 +81,7 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
-                <div onMouseEnter={() => { setHoveringOnSlide(true) }} onMouseLeave={() => { setHoveringOnSlide(false) }} className='slide w-full h-full absolute transition duration-500'>
+                <div className='slide w-full h-full absolute transition duration-500'>
                     <div className='w-full h-full flex justify-center items-center relative'>
                         <Image src='/energy_solutions.png' alt='Oil And Gas' className='object-cover' fill sizes="(min-width: 768px) 90vw, 0vw"/>                        
                         <div className='z-10 h-full w-fit flex flex-col justify-center items-start gap-2 p-8 max-w-[60%] '>
@@ -90,7 +90,7 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
-                <div onMouseEnter={() => { setHoveringOnSlide(true) }} onMouseLeave={() => { setHoveringOnSlide(false) }} className='slide w-full h-full flex flex-col justify-start items-start absolute transition duration-500'>
+                <div className='slide w-full h-full flex flex-col justify-start items-start absolute transition duration-500'>
                     <div className='w-full h-full flex justify-start items-center relative'>
                         <Image src='/mining.jpg' alt='Oil And Gas' className='object-cover' fill sizes="(min-width: 768px) 90vw, 0vw"/>               
                         <div className='z-10 h-full w-fit flex flex-col justify-center items-start gap-2 p-8 max-w-[60%]'>
