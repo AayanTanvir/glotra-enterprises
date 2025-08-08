@@ -10,28 +10,22 @@ const Hero = () => {
     const slidesRef = useRef<HTMLElement[]>([]);
     const [count, setCount] = useState(0);
     const [slidesCount, setSlidesCount] = useState(0);
-    const slides = [
-        {
-            image: '/drones.png',
-            heading: 'Agricultural Solutions',
-            subheading: 'Explore our range of high-tech agricultural tools designed to streamline operations and maximize yields.',
-        },
-        {
-            image: '/oil_and_gas2.jpg',
-            heading: 'Oil and Gas',
-            subheading: 'Explore our range of high-tech agricultural tools designed to streamline operations and maximize yields.',
-        },
-        {
-            image: '/energy2.jpg',
-            heading: 'Energy Solutions',
-            subheading: 'Explore our range of high-tech agricultural tools designed to streamline operations and maximize yields.',
-        },
-        {
-            image: '/mining.jpg',
-            heading: 'Mining Solutions',
-            subheading: 'Explore our range of high-tech agricultural tools designed to streamline operations and maximize yields.',
-        },
-    ]
+    const [hoveringOnSlide, setHoveringOnSlide] = useState(false);
+
+    useEffect(() => {
+        if (hoveringOnSlide) return;
+
+        const interval = setInterval(() => {
+            setCount(prevCount => {
+                if (prevCount >= slidesRef.current.length - 1) {
+                    return 0;
+                };
+                return prevCount + 1;
+            });
+        }, 5000)
+
+        return () => clearInterval(interval);
+    }, [hoveringOnSlide])
 
     useEffect(() => {
         const nodeList = document.querySelectorAll<HTMLElement>('.slide');
@@ -42,6 +36,10 @@ const Hero = () => {
         setSlidesCount(slidesRef.current.length);
     }, []);
 
+    useEffect(() => {
+        slideHero(count);
+    }, [count])
+
     const slideHero = (to: number) => {
         slidesRef.current.forEach((slide) => {
         slide.style.transform = `translateX(-${to * 100}%)`;
@@ -49,54 +47,52 @@ const Hero = () => {
     };
 
     const goPrev = () => {
-        if (count <= 0) return;
-        const newCount = count - 1;
-        setCount(newCount);
-        slideHero(newCount);
+        setCount(prevCount => {
+            if (prevCount <= 0) return prevCount;
+            return prevCount - 1;
+        });
     };
 
     const goNext = () => {
-        if (count >= slidesRef.current.length - 1) return;
-        const newCount = count + 1;
-        setCount(newCount);
-        slideHero(newCount);
+        setCount(prevCount => {
+            if (prevCount >= slidesRef.current.length - 1) return prevCount;
+            return prevCount + 1;
+        });
     };
-
-    //add timeout for slides after every 10 seconds
 
     return (
         <div className='w-full h-[30rem] flex md:flex-col md:gap-4 justify-center items-center md:pt-4'>
             <div className='hidden md:block w-[90%] h-full relative overflow-hidden'>
-                <div className='slide w-full h-full absolute transition duration-500'>
+                <div onMouseEnter={() => { setHoveringOnSlide(true) }} onMouseLeave={() => { setHoveringOnSlide(false) }} className='slide w-full h-full absolute transition duration-500'>
                     <div className='w-full h-full flex justify-start items-center relative'>
-                        <Image src='/drones.png' alt='Agricultural Field with Drones' className='object-cover absolute' fill/>
+                        <Image src='/drones.png' alt='Agricultural Field with Drones' className='object-cover absolute' fill sizes="(min-width: 768px) 90vw, 0vw"/>
                         <div className='z-10 h-full w-fit flex flex-col justify-center items-start gap-2 p-8 max-w-[60%]'>
                             <h1 className='font-geist font-bold text-6xl text-white text-shadow-black text-shadow-sm select-none'>Agricultural Products</h1>
                             <p className='font-geist text-xl text-white select-none text-shadow-black text-shadow-sm'>Explore our range of high-tech agricultural tools and devices</p>
                         </div>
                     </div>
                 </div>
-                <div className='slide w-full h-full flex flex-col justify-start items-start absolute transition duration-500'>
+                <div onMouseEnter={() => { setHoveringOnSlide(true) }} onMouseLeave={() => { setHoveringOnSlide(false) }} className='slide w-full h-full flex flex-col justify-start items-start absolute transition duration-500'>
                     <div className='w-full h-full flex justify-start items-center relative'>
-                        <Image src='/oil_and_gas2.jpg' alt='Oil And Gas' className='object-cover' fill/>                        
+                        <Image src='/oil_and_gas2.jpg' alt='Oil And Gas' className='object-cover' fill sizes="(min-width: 768px) 90vw, 0vw"/>                        
                         <div className='z-10 h-full w-fit flex flex-col justify-center items-start gap-2 p-8 max-w-[60%]'>
                             <h1 className='font-geist font-bold text-6xl text-white text-shadow-black text-shadow-sm select-none'>Oil & Gas</h1>
                             <p className='font-geist text-xl text-white select-none text-shadow-black text-shadow-sm'>Sustainable & Reliable Products for the Oil and Gas Industry</p>
                         </div>
                     </div>
                 </div>
-                <div className='slide w-full h-full absolute transition duration-500'>
+                <div onMouseEnter={() => { setHoveringOnSlide(true) }} onMouseLeave={() => { setHoveringOnSlide(false) }} className='slide w-full h-full absolute transition duration-500'>
                     <div className='w-full h-full flex justify-center items-center relative'>
-                        <Image src='/energy_solutions.png' alt='Oil And Gas' className='object-cover' fill/>                        
+                        <Image src='/energy_solutions.png' alt='Oil And Gas' className='object-cover' fill sizes="(min-width: 768px) 90vw, 0vw"/>                        
                         <div className='z-10 h-full w-fit flex flex-col justify-center items-start gap-2 p-8 max-w-[60%] '>
                             <h1 className='font-geist font-bold text-6xl text-white text-shadow-black text-shadow-sm select-none mx-auto'>Energy Solutions</h1>
                             <p className='font-geist text-xl text-white select-none text-shadow-black text-shadow-sm mx-auto'>Supporting Renewable and Traditional Energy Projects Alike</p>
                         </div>
                     </div>
                 </div>
-                <div className='slide w-full h-full flex flex-col justify-start items-start absolute transition duration-500'>
+                <div onMouseEnter={() => { setHoveringOnSlide(true) }} onMouseLeave={() => { setHoveringOnSlide(false) }} className='slide w-full h-full flex flex-col justify-start items-start absolute transition duration-500'>
                     <div className='w-full h-full flex justify-start items-center relative'>
-                        <Image src='/mining.jpg' alt='Oil And Gas' className='object-cover' fill/>                        
+                        <Image src='/mining.jpg' alt='Oil And Gas' className='object-cover' fill sizes="(min-width: 768px) 90vw, 0vw"/>               
                         <div className='z-10 h-full w-fit flex flex-col justify-center items-start gap-2 p-8 max-w-[60%]'>
                             <h1 className='font-geist font-bold text-6xl text-white text-shadow-black text-shadow-sm select-none'>Mining Solutions</h1>
                             <p className='font-geist text-xl text-white select-none text-shadow-black text-shadow-sm'>Powerful Solutions for Surface and Underground Mining Work</p>

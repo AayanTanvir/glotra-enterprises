@@ -33,7 +33,7 @@ const Products = () => {
             <div className="hidden md:flex xl:px-32 justify-between items-center gap-8 px-10 w-full">
                 {divisionCards.map((e, index) => (
                     <div key={index} className="relative group w-[20rem] h-[10rem] sm:h-[12rem] overflow-hidden flex justify-center items-center rounded-lg">
-                        <Image src={e.image} alt="Agriculture" className="object-cover transition-all duration-300 ease-in-out group-hover:blur-[2px] select-none" fill/>
+                        <Image src={e.image} alt="Agriculture" className="object-cover transition-all duration-300 ease-in-out group-hover:blur-[2px] select-none" fill sizes="90vw"/>
                         <div className="w-full h-full group-hover z-10">
                             <h1 className="text-nowrap absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] transition-all duration-300 ease-in-out group-hover:top-[40%] text-xl select-none font-geist font-semibold px-4 py-2 rounded-lg bg-white text-black border-[1px] border-black">{e.division}</h1>
                             <Button to="/products" variant="primary" className="absolute bottom-[25%] left-[50%] -translate-x-[50%] opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 rounded bg-white text-black border-[1px] border-black px-3 py-1 text-base" icon={<GoLinkExternal className="text-black"/>}>View</Button>
@@ -46,7 +46,7 @@ const Products = () => {
                     <MdNavigateBefore className={`text-xl text-foreground ${selectedDivisionIndex === 1 ? 'cursor-not-allowed text-foreground/20' : ''}`}/>
                 </div>
                 <div className="relative w-[70%] h-[10rem] sm:h-[12rem] overflow-hidden flex justify-center items-center rounded-lg">
-                    <Image src={selectedDivision.image} alt="Agriculture" className="object-cover blur-[2px] select-none" fill/>
+                    <Image src={selectedDivision.image} alt="Agriculture" className="object-cover blur-[2px] select-none" fill sizes="90vw"/>
                     <div className="w-full h-full z-10 flex flex-col justify-center items-center gap-2">
                         <h1 className="text-md select-none font-geist px-3 py-2 rounded-lg bg-foreground text-background border-[1px] border-background">{selectedDivision.division}</h1>
                         <Button to="/products" variant="primary" className="rounded bg-foreground text-background border-[1px] border-background px-2 py-1 text-sm" icon={<GoLinkExternal className="text-background"/>}>View</Button>
