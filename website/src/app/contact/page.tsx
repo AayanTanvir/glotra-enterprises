@@ -105,7 +105,7 @@ const ContactUs = () => {
                 </div>
                 <div className="w-[80%] min-h-[18rem] border-[1px] border-foreground/30 rounded p-8 flex flex-col justify-center items-center gap-4">
                     <h2 className="text-2xl text-foreground font-geist font-semibold">Send an Inquiry</h2>
-                    <form action="https://formsubmit.co/a43b2a851d1a1f15046e72ad203503d3" method="POST" className="w-full h-full flex flex-col justify-center items-center gap-5">
+                    <form action="https://formsubmit.co/info@glotraent.com" method="POST" className="w-full h-full flex flex-col justify-center items-center gap-5">
                         <input type="hidden" name="_template" value="box" />
                         <input type="hidden" name="_next" value={`${currentHost}/inquiry-sent`} />
                         <input type="hidden" name="_subject" value="New Inquiry | Glotra Enterprises"></input>
