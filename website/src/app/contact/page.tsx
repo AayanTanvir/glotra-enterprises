@@ -4,9 +4,15 @@ import { IoCallOutline } from "react-icons/io5";
 import { TbDeviceLandlinePhone } from "react-icons/tb";
 import { MdAlternateEmail } from "react-icons/md";
 import { MdOutlinePersonOutline } from "react-icons/md";
+import { useEffect, useState } from "react";
 
 const ContactUs = () => {
-    const currentHost = window.location.origin
+
+    const [currentHost, setCurrentHost] = useState("");
+
+    useEffect(() => {
+        setCurrentHost(window.location.origin);
+    }, []);
 
     const CONTACTS_PAK_OFFICE = [
         {
