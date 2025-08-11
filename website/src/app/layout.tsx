@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { AppContextProvider } from "@/context/AppContext";
 import Sidebar from "@/components/Sidebar";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -87,9 +88,9 @@ export default function RootLayout({
                     {children}
                 </main>
 
-                <footer className="w-full bg-neutral-900 p-2 mt-4">
+                <footer className="w-full bg-neutral-900 mt-6">
                     {/* <p className='font-rubik text-center text-xs sm:text-md select-none'>© {new Date().getFullYear()} Glotra Enterprises. All rights reserved.</p> */}
-                    
+                    <Footer />
                 </footer>
             </AppContextProvider>
         </body>

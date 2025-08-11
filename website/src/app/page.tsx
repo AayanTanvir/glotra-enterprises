@@ -2,7 +2,6 @@
 
 import React from 'react';
 import WhyChooseUs from '@/sections/WhyChooseUs';
-import IndustriesWeServe from '@/sections/IndustriesWeServe';
 import Hero from '@/sections/Hero';
 import Products from '@/sections/Products';
 
@@ -14,7 +13,6 @@ export default function Home() {
             <div className='w-3/5 h-[1px] rounded-full bg-foreground/10 mt-12 md:mt-10 '/>
             <Products />
             <WhyChooseUs />
-            <IndustriesWeServe />
         </div>
     );
 }
