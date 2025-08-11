@@ -18,13 +18,13 @@ const IndustriesWeServe = () => {
             title: 'Energy',
         },
         {
+            icon: <LuPickaxe className='text-foreground text-2xl' />,
+            title: 'Mining',
+        },
+        {
             icon: <RiOilLine className='text-foreground text-2xl' />,
             title: 'Oil & Gas',
         },
-        {
-            icon: <LuPickaxe className='text-foreground text-2xl' />,
-            title: 'Mining',
-        }
     ]
 
     return (

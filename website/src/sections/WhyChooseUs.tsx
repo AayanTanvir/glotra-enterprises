@@ -31,7 +31,7 @@ const WhyChooseUs = () => {
     ]
 
     return (
-        <div className='w-full h-fit flex justify-start items-center flex-col px-4 mb-12'>
+        <div className='w-full h-fit flex justify-start items-center flex-col px-4 my-12'>
             <h2 className='font-geist text-2xl sm:text-3xl xl:text-4xl font-semibold mb-4 xl:mb-6 select-none italic'>Why Choose <span className='text-primary-300'>Us</span>?</h2>
             <div className='w-full sm:w-4/5 h-fit flex flex-col justify-start items-start gap-6'>
                 {points.map((point, index) => (

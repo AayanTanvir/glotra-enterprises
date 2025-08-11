@@ -21,6 +21,7 @@ const Navbar = () => {
                 </Link>
             </div>
             <div className='hidden sm:flex md:flex-1 md:h-full justify-between md:justify-center items-center gap-2 sm:gap-4'>
+                <NavbarLink to="/">Home</NavbarLink>
                 <NavbarLink to="/contact">Contact Us</NavbarLink>
                 <NavbarLink to="/about">About Us</NavbarLink>
                 <NavbarLink to="/products">Products</NavbarLink>

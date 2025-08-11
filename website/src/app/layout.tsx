@@ -73,7 +73,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-        <body className={`${geistSans.variable} ${rubik.variable} antialiased w-screen min-h-screen flex flex-col `}>
+        <body className={`${geistSans.variable} ${rubik.variable} antialiased w-screen min-h-screen flex flex-col`}>
             <AppContextProvider>
                 <header>
                     <Navbar />
@@ -83,12 +83,13 @@ export default function RootLayout({
                     <Sidebar />
                 </aside>
 
-                <main className="w-screen min-h-fit">
+                <main className="flex-grow">
                     {children}
                 </main>
 
-                <footer className="w-full bg-background p-2 mt-4">
-                    <p className='font-rubik text-center text-xs sm:text-md select-none'>© {new Date().getFullYear()} Glotra Enterprises. All rights reserved.</p>
+                <footer className="w-full bg-neutral-900 p-2 mt-4">
+                    {/* <p className='font-rubik text-center text-xs sm:text-md select-none'>© {new Date().getFullYear()} Glotra Enterprises. All rights reserved.</p> */}
+                    
                 </footer>
             </AppContextProvider>
         </body>

@@ -56,7 +56,7 @@ const ContactUs = () => {
     ] 
     
     return (
-        <div className="w-full min-h-screen flex flex-col justify-center items-center mt-16 gap-10">
+        <div className="w-full min-h-screen flex flex-col justify-center items-center mt-12 md:mt-28 gap-10">
             <h1 className="text-4xl text-foreground font-geist font-semibold tracking-wide">Contact <span className="text-primary-300">Us</span></h1>
             <div className="w-full h-full flex flex-col md:flex-row md:items-start justify-center items-center md:px-10 gap-10">
                 <div className="w-full flex flex-col justify-start items-center">
@@ -95,7 +95,7 @@ const ContactUs = () => {
                                         {contact.href ? (
                                             <a href={contact.href} className="navbar-link text-lg md:text-xl">{contact.contact}</a>
                                         ) : (
-                                            <p className="font-rubik text-foreground text-lg md:text-xl">{contact.contact}</p>
+                                            <p className="font-rubik text-foreground text-lg text-left md:text-xl">{contact.contact}</p>
                                         )}
                                     </div>
                                 </div>
