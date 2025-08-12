@@ -11,7 +11,7 @@ const Footer = () => {
                     <p className='hidden text-white md:inline font-rubik text-xs'>Enterprises (Pvt.) Ltd.</p>
                 </div>
             </div>
-            <p className='font-rubik text-center text-xs sm:text-base sm:text-md select-none'>© {new Date().getFullYear()} Glotra Enterprises. All rights reserved.</p>
+            <p className='font-rubik text-center text-xs sm:text-base sm:text-md select-none text-white'>© {new Date().getFullYear()} Glotra Enterprises. All rights reserved.</p>
         </div>
     )
 }
