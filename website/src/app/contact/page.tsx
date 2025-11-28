@@ -53,54 +53,31 @@ const ContactUs = () => {
             contact: 'info@glotraent.com',
             href: 'mailto:info@glotraent.com',
         },
-    ] 
-    
+    ]
+
     return (
         <div className="w-full min-h-screen flex flex-col justify-center items-center mt-12 md:mt-28 gap-10">
             <h1 className="text-4xl text-foreground font-geist font-semibold tracking-wide">Contact <span className="text-primary-300">Us</span></h1>
-            <div className="w-full h-full flex flex-col md:flex-row md:items-start justify-center items-center md:px-10 gap-10">
-                <div className="w-full flex flex-col justify-start items-center">
-                    <div className="w-[80%] min-h-[15rem] border-[1px] border-foreground/30 rounded mb-12 flex flex-col justify-start items-center">
-                        <div className="w-full py-3 border-b-[1px] border-foreground/30 flex justify-center items-center">
-                            <h2 className="text-2xl text-foreground font-geist font-semibold">Pakistan Office</h2>
-                        </div>
-                        <div className="w-full h-full flex flex-col justify-center items-start gap-6 px-8 py-6">
-                            {CONTACTS_PAK_OFFICE.map((contact, index) => (
-                                <div key={index} className="w-full h-fit flex justify-start sm:justify-center items-center gap-3">
-                                    <div className="w-8 h-8 md:w-10 md:h-10 rounded border-[1px] border-foreground/30 flex justify-center items-center">
-                                        {contact.icon}
-                                    </div>
-                                    <div className="text-center select-none">
-                                        {contact.href ? (
-                                            <a href={contact.href} className="navbar-link text-lg md:text-xl">{contact.contact}</a>
-                                        ) : (
-                                            <p className="font-rubik text-foreground text-lg md:text-xl">{contact.contact}</p>
-                                        )}
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
+            <div className="w-full h-full flex flex-col items-center justify-center md:px-10 gap-10">
+                <div className="w-[80%] md:w-[40%] min-h-[15rem] border-[1px] border-foreground/30 rounded mb-12 flex flex-col justify-start items-center">
+                    <div className="w-full py-3 border-b-[1px] border-foreground/30 flex justify-center items-center">
+                        <h2 className="text-2xl text-foreground font-geist font-semibold">Contact Info</h2>
                     </div>
-                    <div className="w-[80%] min-h-[15rem] border-[1px] border-foreground/30 rounded mb-12 flex flex-col justify-start items-center">
-                        <div className="w-full py-3 border-b-[1px] border-foreground/30 flex justify-center items-center">
-                            <h2 className="text-2xl text-foreground font-geist font-semibold">UK Office</h2>
-                        </div>
-                        <div className="w-full h-full flex flex-col justify-center items-start gap-6 px-8 py-6">
-                            {CONTACTS_UK_OFFICE.map((contact, index) => (
-                                <div key={index} className="w-full h-fit flex justify-start sm:justify-center items-center gap-3">
-                                    <div className="w-8 h-8 md:w-10 md:h-10 rounded border-[1px] border-foreground/30 flex justify-center items-center">
-                                        {contact.icon}
-                                    </div>
-                                    <div className="text-center select-none">
-                                        {contact.href ? (
-                                            <a href={contact.href} className="navbar-link text-lg md:text-xl">{contact.contact}</a>
-                                        ) : (
-                                            <p className="font-rubik text-foreground text-lg text-left md:text-xl">{contact.contact}</p>
-                                        )}
-                                    </div>
+                    <div className="w-full h-full flex flex-col justify-center items-center gap-6 px-8 py-6">
+                        {CONTACTS_PAK_OFFICE.map((contact, index) => (
+                            <div key={index} className="w-full h-fit flex justify-start sm:justify-center items-center gap-3">
+                                <div className="w-8 h-8 md:w-10 md:h-10 rounded border-[1px] border-foreground/30 flex justify-center items-center">
+                                    {contact.icon}
                                 </div>
-                            ))}
-                        </div>
+                                <div className="text-center select-none">
+                                    {contact.href ? (
+                                        <a href={contact.href} className="navbar-link text-lg md:text-xl">{contact.contact}</a>
+                                    ) : (
+                                        <p className="font-rubik text-foreground text-lg md:text-xl">{contact.contact}</p>
+                                    )}
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
                 <div className="w-[80%] min-h-[18rem] border-[1px] border-foreground/30 rounded p-8 flex flex-col justify-center items-center gap-4">

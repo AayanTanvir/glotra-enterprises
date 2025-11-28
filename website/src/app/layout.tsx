@@ -89,7 +89,6 @@ export default function RootLayout({
                 </main>
 
                 <footer className="w-full bg-primary-800 mt-6">
-                    {/* <p className='font-rubik text-center text-xs sm:text-md select-none'>© {new Date().getFullYear()} Glotra Enterprises. All rights reserved.</p> */}
                     <Footer />
                 </footer>
             </AppContextProvider>
