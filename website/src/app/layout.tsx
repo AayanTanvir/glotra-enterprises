@@ -88,7 +88,7 @@ export default function RootLayout({
                     {children}
                 </main>
 
-                <footer className="w-full bg-primary-800 mt-6">
+                <footer className="w-full bg-primary-400 mt-6">
                     <Footer />
                 </footer>
             </AppContextProvider>
