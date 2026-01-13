@@ -37,7 +37,7 @@
     }
 
     .navbar-link {
-        @apply font-rubik tracking-tight relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:rounded-full after:h-[2px] after:bg-foreground after:transition-all after:duration-300 after:ease-in-out hover:after:w-full text-xs text-nowrap sm:text-base md:text-lg select-none;
+        @apply font-rubik text-white tracking-tight relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:rounded-full after:h-[2px] after:bg-white after:transition-all after:duration-300 after:ease-in-out hover:after:w-full text-xs text-nowrap sm:text-base md:text-lg select-none;
     }
 
     .navbar-link-active {
@@ -49,6 +49,10 @@
     }
     .sidebar-link-active {
         @apply bg-primary-500 text-foreground;
+    }
+
+    .link {
+        @apply font-rubik text-foreground tracking-tight relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:rounded-full after:h-[2px] after:bg-foreground after:transition-all after:duration-300 after:ease-in-out hover:after:w-full text-xs text-nowrap sm:text-base md:text-lg select-none;
     }
 }
 

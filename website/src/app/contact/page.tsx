@@ -37,24 +37,6 @@ const ContactUs = () => {
         },
     ]
 
-    const CONTACTS_UK_OFFICE = [
-        {
-            icon: <MdOutlinePersonOutline className="text-foreground/60 text-xl md:text-2xl"/>,
-            contact: 'Muhammad Ishfaq Khan',
-            href: null,
-        },
-        {
-            icon: <IoCallOutline className="text-foreground/60 text-xl md:text-2xl"/>,
-            contact: '+44 7376 077 979',
-            href: 'tel:+447376077979',
-        },
-        {
-            icon: <MdAlternateEmail className="text-foreground/60 text-xl md:text-2xl"/>,
-            contact: 'info@glotraent.com',
-            href: 'mailto:info@glotraent.com',
-        },
-    ]
-
     return (
         <div className="w-full min-h-screen flex flex-col justify-center items-center mt-12 md:mt-28 gap-10">
             <h1 className="text-4xl text-foreground font-geist font-semibold tracking-wide">Contact <span className="text-primary-300">Us</span></h1>
@@ -71,7 +53,7 @@ const ContactUs = () => {
                                 </div>
                                 <div className="text-center select-none">
                                     {contact.href ? (
-                                        <a href={contact.href} className="navbar-link text-lg md:text-xl">{contact.contact}</a>
+                                        <a href={contact.href} className="link text-lg md:text-xl">{contact.contact}</a>
                                     ) : (
                                         <p className="font-rubik text-foreground text-lg md:text-xl">{contact.contact}</p>
                                     )}
