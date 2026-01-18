@@ -14,6 +14,7 @@ const Products = () => {
         {
             image: '/chemical_pumps.png',
             sector: 'Chemical Pumps',
+            to: '/gemmecotti_catalogue.pdf'
         },
         {
             image: '/oil_and_gas.jpg',
@@ -36,7 +37,13 @@ const Products = () => {
                         <Image src={e.image} alt="Image not found" className="object-cover transition-all duration-300 ease-in-out group-hover:blur-[2px] select-none" fill sizes="90vw"/>
                         <div className="w-full h-full group-hover z-10">
                             <h1 className="text-nowrap absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] transition-all duration-300 ease-in-out group-hover:top-[40%] text-xl select-none font-geist font-semibold px-4 py-2 rounded-lg bg-white text-black border-[1px] border-black">{e.sector}</h1>
-                            <Button to="/products" variant="primary" className="absolute bottom-[25%] left-[50%] -translate-x-[50%] opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 rounded bg-white text-black border-[1px] border-black px-3 py-1 text-base" icon={<GoLinkExternal className="text-black"/>}>View</Button>
+                            {e.to ? (
+                                <a target="_blank" href={e.to} rel="noopener noreferrer" className="inline-block">
+                                    <Button variant="primary" className="absolute bottom-[25%] left-[50%] -translate-x-[50%] opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 rounded bg-white text-black border-[1px] border-black px-3 py-1 text-base" icon={<GoLinkExternal className="text-black"/>}>View</Button>
+                                </a>
+                            ) : (
+                                <Button to="/products" variant="primary" className="absolute bottom-[25%] left-[50%] -translate-x-[50%] opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 rounded bg-white text-black border-[1px] border-black px-3 py-1 text-base" icon={<GoLinkExternal className="text-black"/>}>View</Button>
+                            )}
                         </div>
                     </div>
                 ))}
